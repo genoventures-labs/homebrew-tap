@@ -1,8 +1,8 @@
 class Switchbay < Formula
-  desc "Terminal-first AI coding workbench with cloud and local model lanes"
+  desc "Terminal-first AI coding workbench with cloud, local, and MCP lanes"
   homepage "https://github.com/genoventures-labs/Switchbay"
-  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.68/switchbay-0.9.68.tar.gz"
-  sha256 "1f20fc1c0dd228bb8be3b859931cc8d241cc9989d537f726e3806572bc3ffafd"
+  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.69/switchbay-0.9.69.tar.gz"
+  sha256 "5cfddbbdb8d0a64360818b26e0a0208720bf40f75ca197c6e330936bef395810"
   license "MIT"
 
   depends_on "oven-sh/bun/bun"
@@ -27,6 +27,9 @@ class Switchbay < Formula
         export SWITCHBAY_LANE=local
         export SWITCHBAY_LMSTUDIO_BASE=http://YOUR-LM-STUDIO-HOST:1234/v1
         export SWITCHBAY_LMSTUDIO_API_KEY=...
+        # Optional MCP lane:
+        # export SWITCHBAY_LANE=local-mcp
+        # switchbay mcp init
     EOS
   end
 
