@@ -11,7 +11,7 @@ class OriCode < Formula
     system "bun", "install", "--frozen-lockfile"
     (bin/"switchbay").write <<~SH
       #!/bin/bash
-      exec bun "#{prefix}/index.tsx" ""
+      exec bun "#{prefix}/index.tsx" "$@"
     SH
     (bin/"ori-code").write <<~SH
       #!/bin/bash
