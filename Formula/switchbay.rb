@@ -1,19 +1,19 @@
 class Switchbay < Formula
   desc "Terminal-first AI coding workbench with cloud/local model lanes and MCP bridge"
   homepage "https://github.com/genoventures-labs/Switchbay"
-  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.81/switchbay-0.9.81.tar.gz"
-  sha256 "9c896b7571c3cfb7d3391651ba7844d978d9002ea023f216736ea9a193e67c31"
+  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.82/switchbay-0.9.82.tar.gz"
+  sha256 "0037a9c48fe76423ed509b22407bd2d44a1dfef61a6eeb36d4dac793af3b039f"
   license "MIT"
 
   depends_on "oven-sh/bun/bun"
 
   def install
     system "bun", "install", "--frozen-lockfile"
+    prefix.install Dir["*"]
     (bin/"switchbay").write <<~SH
       #!/bin/bash
-      exec bun "#{prefix}/index.tsx" "$@"
+      exec bun "#{prefix}/index.tsx" ""
     SH
-    prefix.install Dir["*"]
   end
 
   def caveats
