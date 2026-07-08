@@ -1,8 +1,8 @@
 class Switchbay < Formula
   desc "Terminal-first AI coding workbench with cloud/local model lanes and MCP bridge"
   homepage "https://github.com/genoventures-labs/Switchbay"
-  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.82/switchbay-0.9.82.tar.gz"
-  sha256 "0037a9c48fe76423ed509b22407bd2d44a1dfef61a6eeb36d4dac793af3b039f"
+  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.83/switchbay-0.9.83.tar.gz"
+  sha256 "51a92b783861194afae1b03551db75df1b3492cb3dfe83944fec2f02d985e9d7"
   license "MIT"
 
   depends_on "oven-sh/bun/bun"
@@ -12,7 +12,7 @@ class Switchbay < Formula
     prefix.install Dir["*"]
     (bin/"switchbay").write <<~SH
       #!/bin/bash
-      exec bun "#{prefix}/index.tsx" ""
+      exec bun "#{prefix}/index.tsx" "$@"
     SH
   end
 
