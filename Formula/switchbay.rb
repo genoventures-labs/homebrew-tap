@@ -1,8 +1,8 @@
 class Switchbay < Formula
-  desc "Terminal-first AI coding workbench with cloud, local, and MCP lanes"
+  desc "Terminal-first AI coding workbench with cloud/local model lanes and MCP bridge"
   homepage "https://github.com/genoventures-labs/Switchbay"
-  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.78/switchbay-0.9.78.tar.gz"
-  sha256 "0db3e438c8b5b4f01a19582e99c33a4209932b0983762d82d223c22e8918f042"
+  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.79/switchbay-0.9.79.tar.gz"
+  sha256 "d8b6ebfde2b26b7b00dce7fe59b8abc968784519d71a9529bba88d13ac780e4e"
   license "MIT"
 
   depends_on "oven-sh/bun/bun"
@@ -23,15 +23,26 @@ class Switchbay < Formula
         export OPENAI_API_KEY=...
         export ANTHROPIC_API_KEY=...
 
+      Switchbay MCP bridge:
+        export SWITCHBAY_MCP=on
+        # or: export SWITCHBAY_TOOL_MODE=switchbay-mcp
+
       Cloud MCP lane:
         export SWITCHBAY_LANE=cloud-mcp
         export OPENAI_API_KEY=...
         export ANTHROPIC_API_KEY=...
 
+      Switchbay MCP bridge:
+        export SWITCHBAY_MCP=on
+        # or: export SWITCHBAY_TOOL_MODE=switchbay-mcp
+
       Local lane:
         export SWITCHBAY_LANE=local
         export SWITCHBAY_LMSTUDIO_BASE=http://YOUR-LM-STUDIO-HOST:1234/v1
         export SWITCHBAY_LMSTUDIO_API_KEY=...
+        # Legacy/native LM Studio MCP testing:
+        # export SWITCHBAY_LANE=native-mcp
+        # switchbay mcp init
         # Optional MCP lane:
         # export SWITCHBAY_LANE=local-mcp
         # switchbay mcp init
