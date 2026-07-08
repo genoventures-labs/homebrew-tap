@@ -10,6 +10,7 @@ class Switchbay < Formula
   def install
     system "bun", "install", "--frozen-lockfile"
     prefix.install Dir["*"]
+    rm_f bin/"switchbay"
     (bin/"switchbay").write <<~SH
       #!/bin/bash
       exec bun "#{prefix}/index.tsx" "$@"
