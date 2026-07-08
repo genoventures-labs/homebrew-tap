@@ -1,8 +1,8 @@
 class Switchbay < Formula
   desc "Terminal-first AI coding workbench with cloud, local, and MCP lanes"
   homepage "https://github.com/genoventures-labs/Switchbay"
-  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.77/switchbay-0.9.77.tar.gz"
-  sha256 "aeb8650cd998e8957b4bce6148545153d59b4a08b8ef11a20f5e3c5f5c3db920"
+  url "https://github.com/genoventures-labs/Switchbay/releases/download/v0.9.78/switchbay-0.9.78.tar.gz"
+  sha256 "0db3e438c8b5b4f01a19582e99c33a4209932b0983762d82d223c22e8918f042"
   license "MIT"
 
   depends_on "oven-sh/bun/bun"
@@ -20,6 +20,11 @@ class Switchbay < Formula
     <<~EOS
       Cloud lane:
         export SWITCHBAY_LANE=cloud
+        export OPENAI_API_KEY=...
+        export ANTHROPIC_API_KEY=...
+
+      Cloud MCP lane:
+        export SWITCHBAY_LANE=cloud-mcp
         export OPENAI_API_KEY=...
         export ANTHROPIC_API_KEY=...
 
