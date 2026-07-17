@@ -1,8 +1,8 @@
 class Switchbay < Formula
   desc "Terminal-first AI coding workbench with cloud/local model lanes and MCP bridge"
   homepage "https://github.com/genoventures-labs/Switchbay"
-  url "https://github.com/genoventures-labs/Switchbay/releases/download/v1.6.853/switchbay-1.6.853.tar.gz"
-  sha256 "9d2f663081f0c6159181603e68496b9ed439a3683ce789410a2196c7a91a2f8f"
+  url "https://github.com/genoventures-labs/Switchbay/releases/download/v1.6.854/switchbay-1.6.854.tar.gz"
+  sha256 "10e3a4e8cb75e6fb2eea5de3e615a45ababd67150216d33944ae1dcf5076e097"
   license "MIT"
 
   depends_on "oven-sh/bun/bun"
