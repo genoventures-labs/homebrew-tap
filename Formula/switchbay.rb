@@ -1,5 +1,5 @@
 class Switchbay < Formula
-  desc "Terminal-first AI coding workbench with cloud/local model lanes and MCP bridge"
+  desc "AI operating system for the terminal — persistent agent, multi-model routing, engines, skills, and plugins"
   homepage "https://github.com/genoventures-labs/Switchbay"
   url "https://github.com/genoventures-labs/Switchbay/releases/download/v1.6.1511/switchbay-1.6.1511.tar.gz"
   sha256 "5eaa2a41c8a678b6dda5a78b97b41308f9f2cd9303613831bfb991af290e6ccc"
